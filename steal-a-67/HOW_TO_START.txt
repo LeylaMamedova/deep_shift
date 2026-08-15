@@ -1,0 +1,63 @@
+ROB 67s FROM CAYLUS — how to start in ROBLOX
+=============================================
+
+Like Steal a Brainrot + Caylus's game, but the collectibles are 67s.
+No horror. No fighting. If Caylus tags you, you just drop the 67.
+
+1) Open Roblox Studio
+   - New experience → Baseplate
+   - Save as: Rob 67s From Caylus  (or Steal a 67)
+
+2) Paste the 2 scripts
+
+   ServerScriptService:
+     - Server.lua          (Script)
+
+   StarterPlayer → StarterPlayerScripts:
+     - Client.lua          (LocalScript)
+
+3) Press PLAY
+   The map builds itself:
+     - red conveyor in the middle (67s slide by — buy them)
+     - 4 player bases
+     - CAYLUS VAULT (north) with free steal 67s
+     - Caylus NPC who chases thieves
+
+4) How to play (Caylus / Steal a Brainrot loop)
+   - You get a base + $100
+   - Stand by the CONVEYOR and hold E on a 67 to BUY it
+   - 67s on your pads print cash every second
+   - Hold E on someone else's 67 to STEAL it (if their base is unlocked)
+   - Or sneak into CAYLUS VAULT and steal his 67s for free
+   - RUN HOME — you are slower while carrying
+   - Caylus chases you. If he touches you, the 67 goes back
+   - Reach your empty pad and it places
+   - Hold E on LOCK so other players cannot steal from you
+   - Hold E on the gold REBIRTH button on your base
+   - Rebirth wipes your 67s + cash, gives +1x money forever
+   - Rebirth 7 = 7-JUMP (jump 7 times in the air)
+
+5) Rebirth costs
+   Rebirth 1 = $200
+   Rebirth 2 = $400
+   ...
+   Rebirth 7 = $1400  ← unlocks 7-JUMP
+   After that you can keep rebirthing for more cash multiplier
+
+6) 67 rarities on the conveyor
+   Common 67     cheap, common
+   Rare 67       blue
+   Epic 67       purple
+   Secret 67     gold, rare
+   Vault 67      only in Caylus's base (steal only)
+   Caylus 67     best one, only in his vault
+
+7) Decorate later (the building / obby part)
+   Recolor floors, add walls, neon, signs.
+   Do NOT delete: Plot1-4, Pad1-4, LockButton, RebirthButton, Conveyor, CaylusBase, Caylus
+
+TIPS
+- Test chase: steal from the vault, then run to your base
+- Test 2 players: Home → Test → 2 Players
+- If HUD missing: Client.lua must be a LocalScript under StarterPlayerScripts
+- If map missing: Server.lua must be a Script under ServerScriptService

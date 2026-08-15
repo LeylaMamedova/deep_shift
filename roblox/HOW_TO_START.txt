@@ -1,0 +1,59 @@
+HAUNTED FOREST — how to start in ROBLOX
+========================================
+
+1) Open Roblox Studio
+   - Go to https://create.roblox.com
+   - Click Create / open Studio
+   - New experience → Baseplate (or your forest map)
+
+2) Build a quick forest (or use your map)
+   - Add trees / parts in Workspace
+   - Optional: rename the place “Haunted Forest”
+
+3) Put your animatronic models in Workspace
+   Make 3 Models named EXACTLY:
+     PhantomPuppet
+     Ennard
+     WitheredBonnie
+   Each model needs a Humanoid + HumanoidRootPart (Rig / NPC).
+   Put them where you want them to spawn (or near SpawnLocation).
+
+4) Add beacons (survivor objectives)
+   - Make 4 Parts named: Beacon1, Beacon2, Beacon3, Beacon4
+   - Put them around the map
+   - Color them dark green for now
+
+5) Paste the scripts (from this roblox folder)
+   ServerScriptService:
+     - ChoosePhantomPuppet.lua (Script)  ← random player becomes Phantom Puppet
+     - RoleSetup.lua           (Script)
+     - RoundTimer.lua          (Script)
+     - KillerAI.lua            (Script)  ← leave OFF if you want player killer only
+     - BeaconServer.lua        (Script)
+     - PhantomPuppetM1_Server.lua (Script)
+
+   StarterPlayer → StarterPlayerScripts:
+     - RoleReveal.lua          (LocalScript)  ← "YOU ARE PHANTOM PUPPET" splash
+     - PhantomPuppetM1_Client.lua (LocalScript)
+     - HudClient.lua           (LocalScript)
+     - BeaconClient.lua        (LocalScript)
+
+   Put your PhantomPuppet model in ServerStorage (or Workspace).
+   Optional: Workspace part named KillerSpawn (where the killer appears).
+
+6) Press PLAY (blue Play button at the top of Studio)
+   - After a few seconds: "CHOOSING KILLER"
+   - One random player becomes Phantom Puppet (the rest are Survivors)
+   - Killer can click to M1 swing
+   - Clock goes 12:00 AM → 6:00 AM
+   - Hold E near a Beacon to light it
+
+7) Publish to Roblox (so friends can join)
+   - File → Publish to Roblox
+   - Set name / description
+   - Home → your experience → Play
+
+TIPS
+- If killers don’t move: check model names and that they have HumanoidRootPart.
+- If HUD doesn’t show: HudClient must be a LocalScript under StarterPlayerScripts.
+- Timer style is Bite by Night–like (12 AM → 6 AM).

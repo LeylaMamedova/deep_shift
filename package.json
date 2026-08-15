@@ -1,0 +1,13 @@
+{
+  "name": "haunted-forest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Wirebound — original factory horror with ClampRig 2.0 and a high-graphics cinematic menu.",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,26 @@
+Wirebound — Deep Shift
+======================
+
+Play here
+---------
+  1. Double-click start.bat
+  2. Open http://localhost:5177
+  3. FULLSCREEN (or F11)
+  4. NEW GAME — click to lock the mouse
+  5. F = flashlight   LMB = blue hand   RMB = red hand
+  6. Ivorymaw stalks in the dark. If the keys chatter in your beam,
+     look away. Staring too long = jumpscare.
+
+Host on YOUR Linux home server + Cloudflare Tunnel
+--------------------------------------------------
+See deploy/README.md
+
+  sudo ./deploy/cloudflare-tunnel.sh play.yourdomain.com
+
+Then add the hostname in /etc/cloudflared/config.yml
+pointing at http://127.0.0.1:5177 and restart cloudflared.
+
+
+The game is only files in public/ (html, css, js). No database.
+
+This is original horror. Ivorymaw is not Pianosaurus / Poppy Playtime.

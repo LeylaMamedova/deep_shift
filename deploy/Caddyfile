@@ -1,0 +1,19 @@
+{
+	email {$EMAIL}
+}
+
+{$DOMAIN} {
+	encode gzip zstd
+	root * {$SITE_ROOT}
+	try_files {path} /index.html
+	file_server
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy no-referrer
+		X-Frame-Options SAMEORIGIN
+	}
+
+	@static path *.js *.css *.png *.jpg *.webp *.woff2 *.module.js
+	header @static Cache-Control "public, max-age=86400"
+}

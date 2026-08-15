@@ -1,0 +1,10 @@
+# Cloudflare Tunnel — put this at /etc/cloudflared/config.yml
+# Replace HOSTNAME and TUNNEL_ID.
+
+tunnel: TUNNEL_ID
+credentials-file: /etc/cloudflared/TUNNEL_ID.json
+
+ingress:
+  - hostname: HOSTNAME
+    service: http://127.0.0.1:5177
+  - service: http_status:404

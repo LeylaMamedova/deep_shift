@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#070103" />
+  <title>Wirebound — Deep Shift</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <section id="menu" class="menu-screen">
+      <canvas id="menu-canvas"></canvas>
+      <div class="menu-fade" aria-hidden="true"></div>
+      <div class="menu-col">
+        <p class="chapter">CHAPTER 1</p>
+        <h1>DEEP SHIFT</h1>
+        <p class="lede">The factory never powered down. Keep the beam moving. If the keys start playing by themselves, do not look at them.</p>
+        <nav class="menu-nav">
+          <button id="btn-continue" class="menu-btn" type="button">CONTINUE</button>
+          <button id="btn-new" class="menu-btn" type="button">NEW GAME</button>
+          <button id="btn-settings" class="menu-btn" type="button">SETTINGS</button>
+          <button id="btn-credits" class="menu-btn" type="button">CREDITS</button>
+          <button id="btn-fullscreen" class="menu-btn" type="button">FULLSCREEN</button>
+          <button id="btn-quit" class="menu-btn" type="button">QUIT</button>
+        </nav>
+      </div>
+
+      <aside id="settings" class="panel hidden">
+        <h2>Settings</h2>
+        <p class="pick-label">Graphics</p>
+        <div class="quality-row">
+          <button type="button" data-quality="high">High</button>
+          <button type="button" data-quality="ultra">Ultra</button>
+        </div>
+        <p class="fine">F flashlight · F11 fullscreen. Ultra uses 2× pixel ratio and bloom.</p>
+        <button id="settings-close" class="menu-btn" type="button">BACK</button>
+      </aside>
+
+      <aside id="credits" class="panel hidden">
+        <h2>Credits</h2>
+        <p>Wirebound is original factory horror. Ivorymaw is an original piano-jaw predator — not affiliated with MOB Games.</p>
+        <p>Host the <code>public/</code> folder or run <code>node server/index.js</code> on your machine.</p>
+        <button id="credits-close" class="menu-btn" type="button">BACK</button>
+      </aside>
+    </section>
+
+    <section id="hud" class="hidden">
+      <canvas id="game"></canvas>
+      <div class="hud-top">
+        <div class="clock" id="flash-state">FLASHLIGHT ON</div>
+        <div class="objective" id="objective">Sockets 0 / 2</div>
+      </div>
+      <div class="hud-bottom">
+        <div class="bar">
+          <span>Stamina</span>
+          <div class="track"><i id="stamina-fill"></i></div>
+        </div>
+        <div class="hint" id="hint">F flashlight · LMB blue · RMB red</div>
+        <div class="ability">Leave to save</div>
+      </div>
+      <div id="toast" class="toast hidden"></div>
+      <button id="leave-btn" class="leave" type="button">Leave</button>
+    </section>
+
+    <div id="jumpscare" class="jumpscare hidden" aria-hidden="true"></div>
+
+    <section id="end" class="screen hidden">
+      <div class="end-card">
+        <h2 id="end-title">Night over</h2>
+        <p id="end-body"></p>
+        <button id="again-btn" class="btn primary" type="button">Back to menu</button>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
