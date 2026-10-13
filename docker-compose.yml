@@ -1,0 +1,10 @@
+services:
+  deep_shift:
+    build: .
+    container_name: deep_shift
+    restart: unless-stopped
+    environment:
+      - PORT=5177
+    ports:
+      - "127.0.0.1:5177:5177"
+    mem_limit: 256m
